@@ -1,12 +1,12 @@
-using EmployeeAPI.Filters;
 using EmployeeAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeAPI.Controllers
 {
     [ApiController]
     [Route("api/Emp")]
-    [CustomAuthFilter]
+    [Authorize]
     public class EmployeeController : ControllerBase
     {
         private static List<Employee> employees = GetStandardEmployeeList();
@@ -31,8 +31,8 @@ namespace EmployeeAPI.Controllers
 
                     Skills = new List<Skill>()
                     {
-                        new Skill{ Id = 1, Name = "C#" },
-                        new Skill{ Id = 2, Name = ".NET Core" }
+                        new Skill { Id = 1, Name = "C#" },
+                        new Skill { Id = 2, Name = ".NET Core" }
                     }
                 },
 
@@ -52,8 +52,8 @@ namespace EmployeeAPI.Controllers
 
                     Skills = new List<Skill>()
                     {
-                        new Skill{ Id = 3, Name = "Communication" },
-                        new Skill{ Id = 4, Name = "Recruitment" }
+                        new Skill { Id = 3, Name = "Communication" },
+                        new Skill { Id = 4, Name = "Recruitment" }
                     }
                 }
             };
