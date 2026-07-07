@@ -1,0 +1,12 @@
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\bin\Debug\net8.0\CustomerCommLib.deps.json
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\bin\Debug\net8.0\CustomerCommLib.dll
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\bin\Debug\net8.0\CustomerCommLib.pdb
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.GeneratedMSBuildEditorConfig.editorconfig
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.AssemblyInfoInputs.cache
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.AssemblyInfo.cs
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.csproj.CoreCompileInputs.cache
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.sourcelink.json
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.dll
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\obj\Debug\net8.0\refint\CustomerCommLib.dll
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.pdb
+d:\Cognizant\Cognizant_Exercises\Moq_Handson\CustomerCommLib\obj\Debug\net8.0\ref\CustomerCommLib.dll
