@@ -1,0 +1,12 @@
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\bin\Debug\net8.0\CalcLibrary.deps.json
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\bin\Debug\net8.0\CalcLibrary.dll
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\bin\Debug\net8.0\CalcLibrary.pdb
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\obj\Debug\net8.0\CalcLibrary.GeneratedMSBuildEditorConfig.editorconfig
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\obj\Debug\net8.0\CalcLibrary.AssemblyInfoInputs.cache
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\obj\Debug\net8.0\CalcLibrary.AssemblyInfo.cs
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\obj\Debug\net8.0\CalcLibrary.csproj.CoreCompileInputs.cache
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\obj\Debug\net8.0\CalcLibrary.sourcelink.json
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\obj\Debug\net8.0\CalcLibrary.dll
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\obj\Debug\net8.0\refint\CalcLibrary.dll
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\obj\Debug\net8.0\CalcLibrary.pdb
+d:\Cognizant\Cognizant_Exercises\NUnit_Handson\CalcLibrary\obj\Debug\net8.0\ref\CalcLibrary.dll
