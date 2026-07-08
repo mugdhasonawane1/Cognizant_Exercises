@@ -1,38 +1,43 @@
-﻿using RetailInventory.Data;
-using RetailInventory.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using RetailInventory.Data;
 
 using var context = new AppDbContext();
 
-var electronics = new Category
+// Retrieve all products
+var products = await context.Products.ToListAsync();
+
+Console.WriteLine("All Products");
+
+foreach (var p in products)
 {
-    CategoryName = "Electronics"
-};
+    Console.WriteLine($"{p.ProductName} - ₹{p.Price}");
+}
 
-var groceries = new Category
+Console.WriteLine();
+
+// Find by ID
+var product = await context.Products.FindAsync(1);
+
+if (product != null)
 {
-    CategoryName = "Groceries"
-};
-
-await context.Categories.AddRangeAsync(electronics, groceries);
-
-var product1 = new Product
+    Console.WriteLine($"Found: {product.ProductName}");
+}
+else
 {
-    ProductName = "Laptop",
-    Price = 75000,
-    StockQuantity = 10,
-    Category = electronics
-};
+    Console.WriteLine("Product not found.");
+}
 
-var product2 = new Product
+Console.WriteLine();
+
+// First product with price greater than 50000
+var expensive = await context.Products
+    .FirstOrDefaultAsync(p => p.Price > 50000);
+
+if (expensive != null)
 {
-    ProductName = "Rice Bag",
-    Price = 1200,
-    StockQuantity = 50,
-    Category = groceries
-};
-
-await context.Products.AddRangeAsync(product1, product2);
-
-await context.SaveChangesAsync();
-
-Console.WriteLine("Data inserted successfully!");
+    Console.WriteLine($"Expensive: {expensive.ProductName}");
+}
+else
+{
+    Console.WriteLine("No expensive product found.");
+}
