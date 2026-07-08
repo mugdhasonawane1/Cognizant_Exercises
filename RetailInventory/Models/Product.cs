@@ -1,12 +1,17 @@
-using System;
-
-namespace RetailInventory
+namespace RetailInventory.Models
 {
-    class Program
+    public class Product
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Retail Inventory System");
-        }
+        public int ProductId { get; set; }
+
+        public string ProductName { get; set; } = string.Empty;
+
+        public decimal Price { get; set; }
+
+        public int StockQuantity { get; set; }
+
+        public int CategoryId { get; set; }
+
+        public Category? Category { get; set; }
     }
 }
