@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authorization;
+using EmployeeAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -9,36 +9,46 @@ namespace EmployeeAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [AllowAnonymous]
     public class AuthController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult GetToken()
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] LoginModel model)
         {
-            var token = GenerateJSONWebToken(1, "Admin");
-            return Ok(token);
+            if (IsValidUser(model))
+            {
+                var token = GenerateJwtToken(model.Username);
+                return Ok(new { Token = token });
+            }
+
+            return Unauthorized();
         }
 
-        private string GenerateJSONWebToken(int userId, string userRole)
+        private bool IsValidUser(LoginModel model)
         {
-            var securityKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes("mysuperdupersecret"));
+            return model.Username == "admin" &&
+                   model.Password == "admin123";
+        }
 
-            var credentials = new SigningCredentials(
-                securityKey,
-                SecurityAlgorithms.HmacSha256);
-
-            var claims = new List<Claim>
+        private string GenerateJwtToken(string username)
+        {
+            var claims = new[]
             {
-                new Claim(ClaimTypes.Role, userRole),
-                new Claim("UserId", userId.ToString())
+                new Claim(ClaimTypes.Name, username),
+                new Claim(ClaimTypes.Role, "Admin")
             };
 
+            var key = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes("ThisIsASecretKeyForJwtToken"));
+
+            var credentials = new SigningCredentials(
+                key,
+                SecurityAlgorithms.HmacSha256);
+
             var token = new JwtSecurityToken(
-                issuer: "mySystem",
-                audience: "myUsers",
+                issuer: "MyAuthServer",
+                audience: "MyApiUsers",
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(10),
+                expires: DateTime.Now.AddMinutes(60),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
