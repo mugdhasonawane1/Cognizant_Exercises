@@ -1,24 +1,6 @@
-<p>course-list works!</p>
-<div class="container">
+<h1>Available Courses</h1>
 
-    <h1>Course List</h1>
-
-    <div class="course-card">
-        <h3>Angular Development</h3>
-        <p>Code : ANG101</p>
-        <p>Credits : 4</p>
-    </div>
-
-    <div class="course-card">
-        <h3>Java Programming</h3>
-        <p>Code : JAVA201</p>
-        <p>Credits : 3</p>
-    </div>
-
-    <div class="course-card">
-        <h3>Database Management</h3>
-        <p>Code : DB301</p>
-        <p>Credits : 4</p>
-    </div>
-
-</div>
+<app-course-card
+    *ngFor="let c of courses"
+    [course]="c">
+</app-course-card>
