@@ -1,0 +1,14 @@
+.container{
+    padding:40px;
+}
+
+table{
+    width:450px;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+td{
+    border:1px solid #ddd;
+    padding:12px;
+}
